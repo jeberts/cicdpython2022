@@ -1,6 +1,6 @@
-# This is a basic workflow to help you get started with Actions
+# Test any URL whether it is accessible or not. Check once in 2 minutes continuously. 
 
-name: CI
+name: Test URL Monolithic
 
 # Controls when the workflow will run
 on:
@@ -9,6 +9,8 @@ on:
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
+  schedule:
+    - cron: '2 * * * *'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
